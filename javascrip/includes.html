@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array includes()</h1>
+
+    <p>Kiểm tra mảng có chứa "Xoài" không</p>
+
+    <button onclick="myFunction()">Kiểm tra</button>
+
+    <p id="demo"></p>
+    <p><strong>Note:</strong></p>
+
+    <script>
+        function myFunction() {
+            var fruits = ["chuối", "cam", "Táo", "xoài"];
+            var n = fruits.includes("Xoài");
+
+            document.getElementById("demo").innerHTML = n;
+        }
+    </script>
+
+</body>
+</body>
+
+</html>
