@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>toFixed là hàm chuyển đổi một số thành kiểu chuỗi, giữ lại số chữ số thập phân do người dùng xác định.</h1>
+
+    <button onclick="myFunction()">kiểm tra</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var number = 156.4223323
+            var content = '156,4223323' + ' = ' + number.toFixed(4) + '<br';;
+            document.getElementById("demo").innerHTML = content;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> tạo ra một mảng mới với các phần tử là kết quả từ việc thực thi một hàm lên từng phần tử của mảng được gọi.</p>
+
+    <button onclick="myFunction()">kiểm tra</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var numbers = [4, 9, 16, 25];
+
+        function myFunction() {
+            x = document.getElementById("demo")
+            x.innerHTML = numbers.map(Math.sqrt);
+        }
+    </script>
+</body>
+
+</html>

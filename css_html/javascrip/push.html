@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>đẩy thêm một item vào mảng</p>
+
+    <button onclick="myFunction()">kiểm tra</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFunction() {
+            fruits.push("Kiwi");
+            document.getElementById("demo").innerHTML = fruits;
+        }
+    </script>
+
+</body>
+
+</html>
