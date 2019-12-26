@@ -1,0 +1,117 @@
+html
+  head
+    title Web simple
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap', rel='stylesheet')
+    link(href='/stylesheets/css.css', rel='stylesheet')
+    link(href='/stylesheets/detail.css', rel='stylesheet')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  body
+    .header(style='color: black;')
+      .brand
+        a.brand(href='#') Basic Shop
+          
+      .nav
+        .dropdown
+          a
+            b HOME
+        .dropdown
+          a.nav.item
+            b DETAIL
+          .dropdown-content
+            a(href='#')  Food
+            a(href='#')  Drink
+            a(href='#')  Fruit
+        a.nav.item(href='#')
+          b CONTACT
+        a.nav.item(href='#')
+          b SIGN IN
+        input(placeholder='Search')
+        button.fa.fa-search
+    .row
+      .container
+        .col-md-5 
+          .hinh
+            img.img(src='images/xoai.jpg')
+        .col-md-7 
+          h2.product-title Xoài cát hòa lộc 
+          .describe Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt excepturi ipsa, possimus ex dolorem veritatis quisquam facere atque quasi voluptates, distinctio quaerat dolores enim incidunt quos corrupti tenetur consequuntur expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit vero cumque iste similique voluptatibus! Aliquam quod, natus officia unde et explicabo id eaque? Vitae dignissimos reprehenderit repellat accusamus ab.
+          .Quantity
+            
+            .col-md-4
+              p 15.000đ/kg
+            .col-md-4  mã sản phẩm : 1234568
+            |còn hàng
+          span.quantity-title
+            |Số lượng
+          span  
+            i.fa.fa-minus 
+          span 
+            input(placeholder='1')
+          span 
+            i.fa.fa-plus
+
+          button.btn CHỌN MUA
+
+
+
+  section.row
+      article
+        .thumbnail
+          img(src='images/traberry.jpg', alt='')
+          p
+            strong Strawberry
+          p
+            | Dâu tây tươi đà lạt
+          p(style='color: red;')
+            | 150.000đ
+          button.btn CHỌN MUA
+      article
+        .thumbnail
+          img(src='images/apple.jpg', alt='')
+          div
+            p
+              strong Apple
+            p
+              | Táo đỏ mỹ nhập khẩu
+            p(style='color: red;')
+              | 150.000đ
+          button.btn CHỌN MUA
+      article
+        .thumbnail
+          img(src='images/Blueberry.jpeg', alt='')
+          div
+            p
+              strong Blueberry
+            p
+              | Việt quất tươi nhập khẩu
+            p(style='color: red;')
+              | 150.000đ
+          button.btn CHỌN MUA
+      article
+        .thumbnail
+          img(src='images/watermelon.jpg', alt='')
+          p
+            strong watermelon
+          p
+            | Dưa hấu không hạt
+          p(style='color: red;')
+            | 150.000đ
+          button.btn CHỌN MUA
+      article
+        .thumbnail
+          img(src='images/peach.jpeg', alt='')
+          p
+            strong Peach
+          p
+            | Đào nhập khẩu 
+          p(style='color: red;')
+            | 150.000đ
+          button.btn CHỌN MUA
+
+
+    
