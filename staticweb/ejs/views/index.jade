@@ -12,23 +12,21 @@ html
   body
     .header(style='color: black;')
       .brand
-        a.brand(href='#') Basic Shop
+        a.brand(href='/') Basic Shop
           
       .nav
-        .dropdown
-        a.nav.item(href='detail.jade')
-            b HOME
-        .dropdown
-          a.nav.item
-            b DETAIL
-          .dropdown-content
-            a(href='#')  Food
-            a(href='#')  Drink
-            a(href='#')  Fruit
-        a.nav.item(href='#')
+        a.nav(href='/')
+          b HOME
+        a.nav(href='/detail')
+          b DETAIL
+        a.nav(href='#')
           b CONTACT
-        a.nav.item(href='#')
+        .dropdown
           b SIGN IN
+          .dropdown-content
+            a(href='#')  Login
+            a(href='#')  Logout
+
         input(placeholder='Search')
         button.fa.fa-search
     .slideshow-container
@@ -37,7 +35,9 @@ html
     section.row
       article
         .thumbnail
-          img(src='images/traberry.jpg', alt='')
+          a(href='/detail') 
+            img(src='images/traberry.jpg', alt='')
+          
           p
             strong Strawberry
           p
@@ -47,18 +47,20 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/apple.jpg', alt='')
-          div
-            p
-              strong Apple
-            p
-              | Táo đỏ mỹ nhập khẩu
-            p(style='color: red;')
-              | 150.000đ
+          a(href='/detail') 
+            img(src='images/apple.jpg', alt='')
+          
+          p
+            strong Apple
+          p
+            |Táo đỏ mỹ nhập khẩu
+          p(style='color: red;')
+            | 150.000đ
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/Blueberry.jpeg', alt='')
+          a(href='/detail') 
+            img(src='images/Blueberry.jpeg', alt='')
           div
             p
               strong Blueberry
@@ -69,7 +71,8 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/watermelon.jpg', alt='')
+          a(href='/detail') 
+            img(src='images/watermelon.jpg', alt='')
           p
             strong watermelon
           p
@@ -79,7 +82,8 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/peach.jpeg', alt='')
+          a(href='/detail')             
+            img(src='images/peach.jpeg', alt='')
           p
             strong Peach
           p
@@ -89,7 +93,8 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/chuoi.webp', alt='')
+          a(href='/detail') 
+            img(src='images/chuoi.webp', alt='')
           p
             strong Banana
           p
@@ -100,7 +105,8 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/durian.jpg', alt='')
+          a(href='/detail') 
+            img(src='images/durian.jpg', alt='')
           p
             strong Durian
           p
@@ -109,8 +115,9 @@ html
             | 150.000đ
           button.btn CHỌN MUA
       article
-        .thumbnail
-          img(src='images/kiwi.jpg', alt='')
+        .thumbnail          
+          a(href='/detail') 
+            img(src='images/kiwi.jpg', alt='')
           strong
           p
             strong kiwi
@@ -122,7 +129,8 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/orange.jpg', alt='')
+          a(href='/detail') 
+            img(src='images/orange.jpg', alt='')
           strong
           p
             strong Orange
@@ -134,7 +142,8 @@ html
           button.btn CHỌN MUA
       article
         .thumbnail
-          img(src='images/xoai.jpg', alt='')
+          a(href='/detail') 
+           img(src='images/xoai.jpg', alt='')
           strong
           p
             strong Mango

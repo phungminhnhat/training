@@ -13,23 +13,21 @@ html
   body
     .header(style='color: black;')
       .brand
-        a.brand(href='#') Basic Shop
+        a.brand(href='/') Basic Shop
           
       .nav
-        .dropdown
-          a
-            b HOME
-        .dropdown
-          a.nav.item
-            b DETAIL
-          .dropdown-content
-            a(href='#')  Food
-            a(href='#')  Drink
-            a(href='#')  Fruit
-        a.nav.item(href='#')
+        a.nav(href='/')
+          b HOME
+        a.nav(href='/detail')
+          b DETAIL
+        a.nav(href='#')
           b CONTACT
-        a.nav.item(href='#')
+        .dropdown
           b SIGN IN
+          .dropdown-content
+            a(href='#')  Login
+            a(href='#')  Logout
+
         input(placeholder='Search')
         button.fa.fa-search
     .row
@@ -62,6 +60,7 @@ html
   section.row
       article
         .thumbnail
+          
           img(src='images/traberry.jpg', alt='')
           p
             strong Strawberry
@@ -112,6 +111,6 @@ html
           p(style='color: red;')
             | 150.000đ
           button.btn CHỌN MUA
-
+        
 
     
