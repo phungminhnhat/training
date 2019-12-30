@@ -14,7 +14,9 @@ router.get('/index', function(req, res, next) {
 router.get('/detail', function(req, res, next) {
     res.render('detail', { title: 'Express' });
 });
-
+router.get('/dangky', function(req, res, next) {
+    res.render('dangky', { title: 'Express' });
+});
 
 MongoClient.connect(
     url, { useNewUrlParser: true, useUnifiedTopology: true },

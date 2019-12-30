@@ -1,0 +1,45 @@
+html
+  head
+    title Web simple
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap', rel='stylesheet')
+    link(href='/stylesheets/css.css', rel='stylesheet')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  body
+    .header(style='color: black;')
+      .brand
+        a.brand(href='/') Basic Shop
+          
+      .nav
+        a.nav(href='/')
+          b HOME
+        a.nav(href='/detail')
+          b DETAIL
+        a.nav(href='#')
+          b CONTACT
+        .dropdown
+          b SIGN IN
+          .dropdown-content
+            a(href='/dangky')  Login
+            a(href='#')  Logout
+
+        input(placeholder='Search')
+        button.fa.fa-search
+    .form-row
+        h1.title-account Create Your Account
+        .col
+          input.form-control(type='text', placeholder='First name')
+        .col
+          input.form-control(type='text', placeholder='Last name')
+        .col 
+          input.form-control(type='text', placeholder='Email')
+        .col
+          input.form-control(type='text', placeholder='Password')
+        .col 
+          <button type="submit" class="loginBtn">Create an Account</button>
+        
+   
