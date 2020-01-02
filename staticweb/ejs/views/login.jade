@@ -1,0 +1,47 @@
+html
+  head
+    title Web simple
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    title Document
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap', rel='stylesheet')
+    link(href='/stylesheets/css.css', rel='stylesheet')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  body
+    .header(style='color: black;')
+      .brand
+        a.brand(href='/') Basic Shop
+          
+      .nav
+        a.nav(href='/')
+          b HOME
+        a.nav(href='/detail')
+          b DETAIL
+        a.nav(href='#')
+          b CONTACT
+        a.nav(href='/sigin')  
+          b SIGIN
+        a.nav(href='/login')  
+          b LOGIN
+
+        input(placeholder='Search')
+        button.fa.fa-search
+    form(name="/login", method="post").form-control
+        h1.title-account Create Your Account
+        div.col
+            span.label Username
+            input(type="text", name="username")
+        div.col
+            span.label Password
+            input(type="password", name="password")
+        div.actions
+            input(type="submit", value="Sign Up")
+  
+
+
+        
+
+
+    

@@ -21,25 +21,23 @@ html
           b DETAIL
         a.nav(href='#')
           b CONTACT
-        .dropdown
-          b SIGN IN
-          .dropdown-content
-            a(href='/dangky')  Login
-            a(href='#')  Logout
+        a.nav(href='/sigin')  
+          b SIGIN
+        a.nav(href='/login')  
+          b LOGIN
 
         input(placeholder='Search')
         button.fa.fa-search
-    .form-row
+    form(name="/sigin", method="post").form-control
+      .form-row
         h1.title-account Create Your Account
-        .col
-          input.form-control(type='text', placeholder='First name')
-        .col
-          input.form-control(type='text', placeholder='Last name')
-        .col 
-          input.form-control(type='text', placeholder='Email')
-        .col
-          input.form-control(type='text', placeholder='Password')
-        .col 
-          <button type="submit" class="loginBtn">Create an Account</button>
+        div.col
+            span.label Username
+            input.inputform(type="text", name="username")
+        div.col
+            span.label Password
+            input.inputform(type="password", name="password")
+        div.actions
+            input.loginBtn(type="submit", value="Sign Up")
         
    

@@ -4,12 +4,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/fruitdata', { useNewUrlParser: true, useUnifiedTopology: true }).then(
+    () => { console.log("Connected to db successfully") },
+    err => { console.log('Failed to connect') }
+);
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,7 +36,7 @@ app.use(function(req, res, next) {
     next(createError(404));
 });
 
-// error handler
+// error hand
 app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;

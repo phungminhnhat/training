@@ -22,11 +22,10 @@ html
           b DETAIL
         a.nav(href='#')
           b CONTACT
-        .dropdown
-          b SIGN IN
-          .dropdown-content
-            a(href='/login')  Login
-            a(href='#')  Logout
+        a.nav(href='/sigin')  
+          b SIGIN
+        a.nav(href='/login')  
+          b LOGIN
 
         input(placeholder='Search')
         button.fa.fa-search
@@ -55,62 +54,19 @@ html
 
           button.btn CHỌN MUA
 
-
-
   section.row
       article
         .thumbnail
           
           img(src='images/traberry.jpg', alt='')
           p
-            strong Strawberry
+            strong product.name
           p
-            | Dâu tây tươi đà lạt
+            |#{decription}
           p(style='color: red;')
-            | 150.000đ
+            |#{price}
           button.btn CHỌN MUA
-      article
-        .thumbnail
-          img(src='images/apple.jpg', alt='')
-          div
-            p
-              strong Apple
-            p
-              | Táo đỏ mỹ nhập khẩu
-            p(style='color: red;')
-              | 150.000đ
-          button.btn CHỌN MUA
-      article
-        .thumbnail
-          img(src='images/Blueberry.jpeg', alt='')
-          div
-            p
-              strong Blueberry
-            p
-              | Việt quất tươi nhập khẩu
-            p(style='color: red;')
-              | 150.000đ
-          button.btn CHỌN MUA
-      article
-        .thumbnail
-          img(src='images/watermelon.jpg', alt='')
-          p
-            strong watermelon
-          p
-            | Dưa hấu không hạt
-          p(style='color: red;')
-            | 150.000đ
-          button.btn CHỌN MUA
-      article
-        .thumbnail
-          img(src='images/peach.jpeg', alt='')
-          p
-            strong Peach
-          p
-            | Đào nhập khẩu 
-          p(style='color: red;')
-            | 150.000đ
-          button.btn CHỌN MUA
+      
         
 
     
