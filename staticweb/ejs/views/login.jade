@@ -28,16 +28,17 @@ html
 
         input(placeholder='Search')
         button.fa.fa-search
-    form(name="/login", method="post").form-control
-        h1.title-account Create Your Account
+    form(name="/sigin", method="post").form-control
+      .form-row
+        h1.title-account Login Your Account
         div.col
             span.label Username
-            input(type="text", name="username")
+            input.inputform(type="text", name="username")
         div.col
             span.label Password
-            input(type="password", name="password")
+            input.inputform(type="password", name="password")
         div.actions
-            input(type="submit", value="Sign Up")
+            input.loginBtn(type="submit", value="Sign Up")
   
 
 

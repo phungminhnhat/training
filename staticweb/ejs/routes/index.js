@@ -66,5 +66,16 @@ router.post('/login', async function(req, res, next) {
 
 })
 
+router.get('/detail/:id', function(req, res, next) {
+    product.findById(req.param.id)
+        .exec(function(err, video) {
+            if (err) {
+                console.log("err product");
+            } else {
+                res.json(product);
+            }
+        })
+});
+
 
 module.exports = router;
