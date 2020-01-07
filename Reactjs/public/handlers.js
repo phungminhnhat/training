@@ -1,19 +1,89 @@
 
-// Hàm này nằm ở ngoài Component ...
-// xuất ra thông báo là giá trị name sẽ truyền vào khi gọi hàm ra...
+
 function getName(name) {
     alert(name);
 }
-/*
-    Tạo Component Danhsach...
-    Có thể gọi props và props children ngay tại phần render
-*/
+
+class Them extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {number : 0} 
+        this.add = this.add.bind(this);
+    }
+    
+    add(){
+        this.setState({number : this.state.number +1});
+    }
+    render() {
+        return (
+            <div>
+                <button className="hihi" onClick={this.add}>Thêm {this.state.number}</button>
+            </div>
+        );
+    }
+};
+
+class AutoThayImage extends React.Component{
+    constructor(props) {
+        super(props);
+        this.changeImage= this.changeImage.bind(this)
+        this.state = {
+            hinh : 1
+        }
+    }
+    changeImage(){
+        this.setState({hinh:(this.state.hinh %5) +1})
+    }
+    componentDidMount(){
+        setInterval(this.changeImage, 1500)
+    }
+    render() {
+        return (
+            <div className="album">
+                <h1>Tự động chuyển ảnh </h1>
+               <img className="hinh" src={"img/"+ this.state.hinh + ".jpg"}></img>
+              <h1> {this.state.hinh}</h1>
+               
+            </div>
+        );
+    }
+   
+}
+
+class Album extends React.Component{ 
+    constructor(props) {
+        super(props);
+        this.Next=this.Next.bind(this)
+        this.Back=this.Back.bind(this)
+        this.state = {
+            hinh : 5    
+        }
+    }  
+    Next(){
+        this.setState({hinh: (this.state.hinh % 5) +1})
+    }
+    Back(){
+        this.setState({hinh: this.state.hinh == 1?1: this.state.hinh  -1})
+    }
+    
+    render() {
+            return (
+                <div className="album">
+                <h1>Đổi hình</h1>
+                <img className="hinh" src={"img/"+this.state.hinh+".jpg"}/>
+                <br/> 
+                <button onClick={this.Back}>quay lại</button>
+                <button onClick={this.Next}>tiếp theo</button>
+                </div>
+            );
+        }
+}
+
 class Danhsach extends React.Component{
 
-    //   Hàm này là hàm State 
     constructor(props){
         super(props);
-        //dòng này thay cho : this.getInfo.bind(this) 
+     
         this.getInfo=this.getInfo.bind(this);
 
         this.add = this.add.bind(this);
@@ -24,7 +94,7 @@ class Danhsach extends React.Component{
         }
     };
     
-    // Hàm add này dùng để giảm 1
+    //giảm 1
     add(){
     this.state.tongdanhsach = parseInt(this.state.tongdanhsach) - 1 ;
     this.setState(this.state)
@@ -34,27 +104,14 @@ class Danhsach extends React.Component{
         this.state.tongdanhsach = parseInt(this.state.tongdanhsach) + 1 ;
         this.setState(this.state)
     }
-
-
-    //    Hàm này sẽ hiện ra một thông báo .. nội dung là lấy phần children 
     getInfo() {
         alert(this.props.children);
       };
-     
 
-    // hamState(e){
-    //    this.setState({tongdanhsach:e.target.value});
-    // } 
       
     render() {
         return (
             <div>
-               
-
-            {/* Phần này test thuộc tính state
-                Nếu ở phần Render không khai báo props tongdanhsach thì ở phần
-                constructor this.state ={10} luôn.
-             */}
             <div>Tổng danh sách : {this.state.tongdanhsach} </div>
              <button onClick={this.add}>Giảm số người</button>
              <button onClick={this.add2}>Tăng số người</button>
@@ -64,10 +121,6 @@ class Danhsach extends React.Component{
  
 };
 
-/* 
-Tạo 1 component Sản Phẩm..Component này có thể lồng vào component khác,
-ví dụ như lồng Sanpham vào cpnent Danhsach
-*/
 class Sanpham extends React.Component{
     render(){
         return(
@@ -78,9 +131,6 @@ class Sanpham extends React.Component{
     }
 }
 
-/*  Tạo 1 Component inputTag
-
- */
 class InputTag extends React.Component{
     constructor(props) {
         super(props);
@@ -114,7 +164,7 @@ class InputTag extends React.Component{
         return (
           <div>
             Bob says <input type="text" ref="btalks" onChange={this.update.bind(this)} />
-            <button onClick={this.state.sayings}>Hiển thị</button>
+            {this.state.sayings}
           </div>
           
           
@@ -174,13 +224,11 @@ class Test extends React.Component {
     }
 }
 
-
-/* In giá trị ra màn hình...
-Thao tác ở đây sẽ hiện ra trên Chrome
-*/
 ReactDOM.render(
     <div>
-       
+        <Them/>
+        <Album />
+        <AutoThayImage/>
         <Danhsach ten="Giá rẻ" tongdanhsach="10">Props Children</Danhsach>
         <h1></h1>
      

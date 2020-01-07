@@ -1,0 +1,18 @@
+.hinh{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.album{
+    width: 300px;
+    background-color: bisque;
+    border: solid 1px tomato;
+    margin-bottom: 50px;
+    text-align: center;
+    padding: 10px;
+}   
+.hihi{
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
