@@ -1,6 +1,6 @@
-
 var list; 
 
+// Component này là component chứa nội dung các note trong Component List
 class Note extends React.Component{
     constructor(props) {
         super(props);
@@ -24,6 +24,10 @@ class Note extends React.Component{
         var note=this;
         $.post('/update',{idSua:this.props.id,noidung:this.refs.txt.value},function(data){
             list.setState({mang: data});
+
+            // nếu để ở đây là this.setState thì nó sẽ không hiểu là
+            // this của component Note nên ta phải khai báo 1 biến xog gán nó là this
+            
             note.setState({onEdit:false});
         });
     }
@@ -51,6 +55,7 @@ render() {
     
 }
 };
+//Component List là component bao lại các note của Component Note
 class List extends React.Component{
     constructor(props) {
         super(props);
@@ -87,6 +92,11 @@ class List extends React.Component{
         );
     };
 
+    /* Này là dùng dữ liệu từ server truyền qua..
+        Tạo 1 mảng trong index.js sau đó gán phương thức post cho mảng dữ liệu
+        Xong qua đây gọi ra dùng... vẫn dùng state của component List...
+        list ở đây tương tự this ở trong component List 
+     */
     componentDidMount(){
         $.post('/getNote',function(data){
             list.setState({mang : data});
@@ -102,10 +112,16 @@ class InputText extends React.Component{
         this.sendNote=this.sendNote.bind(this)
     }
     sendNote(){
+        // Này là lấy dữ liệu từ server mà ko qua mảng tạo trong component nữa
         $.post("/add",{note : this.refs.txt.value},function(data){
             list.setState({mang : data})
         });
 
+        //Liên kết tới mảng ở Component List và sử dụng concat để nói chuỗi
+        // refs là lấy giá trị mình nhập từ thẻ input để đưa vào cái mảng này
+                // list.setState({mang : list.state.mang.concat(this.refs.txt.value)});
+
+        // Sau khi nhấn vào nút Gửi Note thì cái dòng input với nút button đó ẩn đi
         ReactDOM.unmountComponentAtNode(document.getElementById('add-div'))
     }
     render() {

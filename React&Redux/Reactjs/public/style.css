@@ -16,3 +16,16 @@
     margin-bottom: 30px;
 }
 
+.note{
+    width: 150px;
+    padding: 5px;
+    margin: 3px;
+    border: solid 3px green;
+    border-radius: 5px ;
+}
+.list{
+    width: 170px;
+    padding: 5px;
+    border: solid 1px blue;
+    border-radius: 5px;
+} 

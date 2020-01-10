@@ -1,9 +1,4 @@
 
-
-function getName(name) {
-    alert(name);
-}
-
 class Them extends React.Component{
     constructor(props) {
         super(props);
