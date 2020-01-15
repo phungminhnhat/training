@@ -13,5 +13,9 @@ code {
 }
 .navcorlor{
   background-color: #20232A;
-    color: white
+  color: white
+}
+.container{
+  margin-top: 30px;
+  
 }
